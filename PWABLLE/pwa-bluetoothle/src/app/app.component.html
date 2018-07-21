@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div class="card-body elegant-color white-text rounded-bottom m-5">
+        <!-- Title -->
+        <h4 class="card-title">
+            <a>Input Bluetotoh Data</a>
+        </h4>
+        <!-- Text -->
+        <label for="form1">Service</label>
+        <input type="text" id="form1" class="form-control" [(ngModel)]="service">
+
+        <label for="form2">Characteristic</label>
+        <input type="text" id="form2" class="form-control" [(ngModel)]="characteristic">
+
+        <button type="button" class="btn btn-primary" (click)="connect()">Read value!</button>
+    </div>
+
+    <div class="card-body elegant-color white-text rounded-bottom mr-5 ml-5">
+        <!-- Title -->
+        <h4 class="card-title">
+            <a>Result</a>
+        </h4>
+        <!-- Text -->
+        <p class="card-text">{{ outputvalue }}</p>
+
+    </div>
+    <div class="rounded-bottom mdb-color lighten-3 text-center pt-3 mr-5 ml-5">
+        <ul class="list-unstyled list-inline font-small">
+            <li class="list-inline-item pr-2 white-text">
+                <i class="fa fa-clock-o pr-1"></i>{{ lastupdate }}</li>
+        </ul>
+    </div>
+</div>
